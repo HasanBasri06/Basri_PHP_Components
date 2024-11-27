@@ -2,6 +2,6 @@
 deployment:
   tasks: 
     - echo "Deploy is start"
-    - if [ "$CPANEL_REPO_BRANCH" = "main" ]; then /bin/cp -r * /home/hasanbas/public_html/; fi
+    - if [ "$CPANEL_REPO_BRANCH" = "main" ]; then /bin/cp -r /repositories/Basri_PHP_Components/* /home/hasanbas/public_html/; fi
     - /bin/chmod -R 755 /home/hasanbas/public_html/
     - echo "Doplay is finish"
