@@ -9,9 +9,5 @@ $router->get('/', function() {
 });
 
 $router->get('/users', function() {
-    echo "kullanıcılıar"; die;
-});
-
-$router->get('/deneme', function() {
-    echo "Deneme"; die;
+    return "kullanıcılıar";
 });

@@ -206,11 +206,11 @@ $pugModule = [
             return implode(';', $styles);
         },
 ]; ?><?php 
-\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(11);
-// PUG_DEBUG:11
+\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(13);
+// PUG_DEBUG:13
  ?><?php 
-\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(10);
-// PUG_DEBUG:10
+\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(12);
+// PUG_DEBUG:12
  ?><html><?php 
 \Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(0);
 // PUG_DEBUG:0
@@ -227,8 +227,8 @@ $pugModule = [
 // PUG_DEBUG:3
  ?>  <link<?= (is_bool($_pug_temp = $pugModule['Phug\\Formatter\\Format\\BasicFormat::attributes_assignment'](['rel' => 'stylesheet'], ['href' => $pugModule['Phug\\Formatter\\Format\\BasicFormat::array_escape']('href', $GLOBALS['__jpv_plus_with_ref']($asset, "css/app.css"))], array(  ))) ? var_export($_pug_temp, true) : $_pug_temp) ?> />
 <?php 
-\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(9);
-// PUG_DEBUG:9
+\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(11);
+// PUG_DEBUG:11
  ?>  <body><?php 
 \Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(4);
 // PUG_DEBUG:4
@@ -246,5 +246,12 @@ $pugModule = [
 \Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(7);
 // PUG_DEBUG:7
  ?>router/web.php ile projenizi kodlamaya başlayabilirsiniz</h2>
-</body>
+<?php 
+\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(10);
+// PUG_DEBUG:10
+ ?><a<?= (is_bool($_pug_temp = $pugModule['Phug\\Formatter\\Format\\BasicFormat::attributes_assignment'](['href' => 'https://github.com/HasanBasri06/Basri_PHP_Components'], array(  ))
+) ? var_export($_pug_temp, true) : $_pug_temp) ?>><?php 
+\Phug\Renderer\Profiler\ProfilerModule::recordProfilerDisplayEvent(9);
+// PUG_DEBUG:9
+ ?>Github Repository</a></body>
 </html>
