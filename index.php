@@ -10,7 +10,7 @@ require_once __DIR__ . '/Basri/Router/Router.php';
 $router = new Router;
 
 $router->get('/', function() {
-    return "merhaba";
+    return "otomatik deploy çalıştı";
 });
 
 $router->dispatch();
