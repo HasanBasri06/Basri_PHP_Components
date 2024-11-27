@@ -7,14 +7,18 @@ ini_set('error_reporting', E_ALL);
 use Basri\Router\Router;
 use Basri\Storage\Storage;
 
-require_once __DIR__ . '/config.php';
-require_once __DIR__ . '/Basri/Storage/Storage.php';
-require_once __DIR__ . '/Basri/Router/Router.php';
+require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../Basri/Storage/Storage.php';
+require_once __DIR__ . '/../Basri/Router/Router.php';
 
 $router = new Router;
 
 $router->get('/', function() {
     return "anasayfa";
+});
+
+$router->get('/users', function() {
+    return "kullanıcılar";
 });
 
 $router->dispatch();
