@@ -1,2 +1,6 @@
 RewriteEngine On
-RewriteRule ^(.*)$ public/$1 [L]
+
+# Dinamik yönlendirmeleri çalıştırmak için URL'yi index.php'ye yönlendiriyoruz
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [QSA,L]
