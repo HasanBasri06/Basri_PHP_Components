@@ -17,4 +17,9 @@ $router->get('/', function() {
     return "otomatik deploy çalıştı";
 });
 
+
+$router->get('/users', function() {
+    return "kullanıcılar alındı";
+});
+
 $router->dispatch();
