@@ -11,6 +11,7 @@ class Router {
     private array $routes = [];
 
     public function __construct() {
+        
         $this->route = $_SERVER['REQUEST_URI'];
     }
 
@@ -41,6 +42,7 @@ class Router {
             if (is_object($closure)) {
                 return $closure(...$parameters);
             }
+
         }
 
         return null;
@@ -74,9 +76,10 @@ class Router {
             foreach ($this->routes[$method] as $path) {
                 $uri = trim($path['path'], '/');
                 $output = $this->runServer($uri, $route, $path['closure']);
+            
                 if ($output !== null) {
                     $outputType = gettype($output);
-                    
+
                     if ($outputType === 'object' || $outputType == 'array') {
                         header('Content-Type: application/json');
                         echo json_encode($output);
