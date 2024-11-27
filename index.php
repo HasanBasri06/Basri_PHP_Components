@@ -17,8 +17,11 @@ $router->get('/', function() {
     return "otomatik deploy çalıştı";
 });
 
-
 $router->get('/users', function() {
+    return "kullanıcılar alındı";
+});
+
+$router->post('/users', function() {
     return "kullanıcılar alındı";
 });
 
