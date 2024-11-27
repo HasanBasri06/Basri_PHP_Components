@@ -1,0 +1,22 @@
+{
+    "name": "basri/deneme",
+    "authors": [
+        {
+            "name": "Hasan Basri",
+            "email": "hasannolur06@gmail.com"
+        }
+    ],
+    "require": {
+        "pug-php/pug": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Basri\\":"./Basri/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "nodejs-php-fallback/nodejs-php-fallback": false
+        }
+    }
+}
