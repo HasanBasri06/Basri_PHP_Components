@@ -20,11 +20,10 @@ class Router
     public function group($name, Closure $routes)
     {
         $this->prefix = rtrim($name, '/') . '/';
-        $routes($this); // Call the closure with $this
-        $this->prefix = '/'; // Reset the prefix after the group is processed
+        $routes($this);
+        $this->prefix = '/';
     }
 
-    // Process URL Parameters
     private function runServer($route, $serverRoute, $closure)
     {
         preg_match_all('/\{([a-zA-Z0-9_]+)\}/', $route, $parameterNames);
@@ -34,14 +33,12 @@ class Router
             array_shift($matches); // Remove full match
             $parameters = array_combine($parameterNames[1], $matches);
 
-            // Handle closure execution
             return $this->handleClosure($closure, $parameters);
         }
 
         return null;
     }
 
-    // Handle different closure types
     private function handleClosure($closure, $parameters)
     {
         if (is_array($closure)) {
@@ -60,31 +57,26 @@ class Router
         return null;
     }
 
-    // Define GET route
     public function get(string $url, Closure|string|array $closure, string $name = null)
     {
         return $this->addRoute('GET', $url, $closure, $name);
     }
 
-    // Define POST route
     public function post(string $url, Closure|string|array $closure, string $name = null)
     {
         return $this->addRoute('POST', $url, $closure, $name);
     }
 
-    // Define PUT route
     public function put(string $url, Closure|string|array $closure, string $name = null)
     {
         return $this->addRoute('PUT', $url, $closure, $name);
     }
 
-    // Define DELETE route
     public function delete(string $url, Closure|string|array $closure, string $name = null)
     {
         return $this->addRoute('DELETE', $url, $closure, $name);
     }
 
-    // Helper method to add a route
     private function addRoute($method, $url, $closure, $name)
     {
         $this->routes[$method][] = [
@@ -95,7 +87,6 @@ class Router
         return $this;
     }
 
-    // Dispatch the route
     public function dispatch()
     {
         $method = $_SERVER['REQUEST_METHOD'];
@@ -116,7 +107,6 @@ class Router
         throw new Exception("404 Not Found: Route does not exist.");
     }
 
-    // Send the appropriate response based on the output type
     private function sendResponse($output)
     {
         $outputType = gettype($output);

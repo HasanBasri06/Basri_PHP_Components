@@ -16,4 +16,11 @@ class Config {
             'page' => __DIR__ . '/storage'
         ];
     } 
+    
+    public static function view() 
+    {
+        return [
+            'path' => __DIR__ . '/views'
+        ];
+    } 
 } 

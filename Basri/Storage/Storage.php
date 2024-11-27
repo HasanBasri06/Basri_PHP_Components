@@ -6,7 +6,7 @@ use Config;
 
 class Storage {
     public static function putFile($file) {
-        $name = Config::storage()['page'];
+        $name = storage_path().'/app/';
 
         if (!file_exists($name)) {
             mkdir($name);
@@ -18,14 +18,14 @@ class Storage {
 
     
     public static function putFileAs($file, $storageName, $folder = '') {
-        $name = Config::storage()['page'].'/'.$folder;
+        $name = storage_path().'/app/'.$folder;
 
         if (!file_exists($name)) {
             mkdir($name, 0777, true);
         }
 
         $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
-        $fileName = $name . '/' . $storageName.".".$extension;
+        $fileName = $name . '/app/' . $storageName.".".$extension;
         move_uploaded_file($file['tmp_name'], $fileName); 
     } 
 }
