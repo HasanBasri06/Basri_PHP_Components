@@ -1,6 +1,6 @@
 <?php
 
-final readonly class Config {
+class Config {
     public static function router() 
     {
         return [

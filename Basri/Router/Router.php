@@ -6,9 +6,9 @@ use Closure;
 use Exception;
 
 class Router {
-    private string $route;
-    private string $prefix = '/';
-    private array $routes = [];
+    private $route;
+    private $prefix = '/';
+    private $routes = [];
 
     public function __construct() {
         
