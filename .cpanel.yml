@@ -2,6 +2,7 @@
 deployment:
   tasks: 
     - echo "Deploy is starting"
+    - chmod -R 755 /home/hasanbas/public_html/
     - cd /home/hasanbas/repositories/Basri_PHP_Components/
     - if [ "$CPANEL_REPO_BRANCH" = "main" ]; then rsync -av --exclude='.git' ./ /home/hasanbas/public_html/; fi
     - chmod -R 755 /home/hasanbas/public_html/
