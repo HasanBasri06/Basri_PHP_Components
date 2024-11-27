@@ -14,15 +14,7 @@ require_once __DIR__ . '/Basri/Router/Router.php';
 $router = new Router;
 
 $router->get('/', function() {
-    return "otomatik deploy çalıştı";
-});
-
-$router->get('/users', function() {
-    return "kullanıcılar alındı";
-});
-
-$router->post('/users', function() {
-    return "kullanıcılar alındı";
+    return "anasayfa";
 });
 
 $router->dispatch();
