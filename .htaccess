@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Dinamik yönlendirmeleri çalıştırmak için URL'yi index.php'ye yönlendiriyoruz
-DocumentRoot /home/hasanbas/public_html/
+DocumentRoot /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
