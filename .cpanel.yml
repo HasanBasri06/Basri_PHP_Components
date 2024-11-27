@@ -1,6 +1,9 @@
 ---
 deployment:
   tasks: 
-    - echo "Deploy is starting"
-    - rsync -av ./ /home/hasanbas/public_html/
-    - echo "Deploy is finished"
+    - export DEPLOYPATH=/home/hasanbas/public_html/
+    - export REMOTEREPO=/home/hasanbas/repositories
+    - /bin/cp  $DEPLOYPATH/Basri_PHP_Components/* #Copy specific file to destination from root
+    - /bin/cp $REMOTEREPO/Basri_PHP_Components/* $DEPLOYPATH #copy specific file from source sub folder
+    - /bin cp * $DEPLOYPATH #copy all from root 
+    - /bin cp /Basri_PHP_Components/* $DEPLOYPATH #copy all from sub folder root
