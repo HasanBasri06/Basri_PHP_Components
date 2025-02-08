@@ -6,11 +6,17 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Phug\\Util\\' => array($vendorDir . '/phug/phug/src/Phug/Util/Util'),
     'Phug\\' => array($vendorDir . '/phug/phug/src/Phug/Ast', $vendorDir . '/phug/phug/src/Phug/Compiler', $vendorDir . '/phug/phug/src/Phug/DependencyInjection', $vendorDir . '/phug/phug/src/Phug/Event', $vendorDir . '/phug/phug/src/Phug/Formatter', $vendorDir . '/phug/phug/src/Phug/Invoker', $vendorDir . '/phug/phug/src/Phug/Lexer', $vendorDir . '/phug/phug/src/Phug/Parser', $vendorDir . '/phug/phug/src/Phug/Reader', $vendorDir . '/phug/phug/src/Phug/Renderer'),
+    'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
     'NodejsPhpFallback\\' => array($vendorDir . '/nodejs-php-fallback/nodejs-php-fallback/src/NodejsPhpFallback'),
+    'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
+    'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Basri\\' => array($baseDir . '/Basri'),
+    'App\\' => array($baseDir . '/app'),
     '' => array($vendorDir . '/js-transformer/js-transformer/src', $vendorDir . '/pug-php/pug/src'),
 );

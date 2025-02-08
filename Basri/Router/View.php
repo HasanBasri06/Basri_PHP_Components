@@ -16,13 +16,14 @@ class View {
     }
     
     public static function make($name, $data = []) {
-        $data = ['asset' => public_path()];
+        $DI = ['asset' => public_path()];
+        $mergeData = array_merge($DI, $data);
         $route = Config::view()['path'] . '/' . $name . ".pug";
         $pug = new Pug([
             'pretty' => true,
             'cache' => storage_path() . '/views/',
         ]);
 
-        return $pug->renderFile($route, $data);
+        return $pug->renderFile($route, $mergeData);
     }
 }

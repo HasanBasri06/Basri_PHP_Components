@@ -11,3 +11,6 @@ function asset($value) {
 function public_path() {
     return '/public/';
 }
+function env($key) {
+    return $_ENV[$key] ?? null;
+}
